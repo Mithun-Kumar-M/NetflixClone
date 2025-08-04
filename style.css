@@ -1,0 +1,213 @@
+:root {
+    --netflix-red: #e50914;
+    --background-dark: #000;
+    --text-light: #fff;
+    --card-bg: #1f1f1f;
+    --muted-text: #b3b3b3;
+    --font-primary: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background-color: var(--background-dark);
+    color: var(--text-light);
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.netflix-header {
+    background: url(/assets/netflix-bg.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.language-select {
+    background: transparent;
+    border: 1px solid var(--netflix-red);
+    color: var(--text-light);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+.hero-subtext {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+.email-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid var(--text-light);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-light);
+}
+.email-input::placeholder {
+    color: var(--muted-text);
+}
+
+.curved-divider {
+    height: 10px;
+    background: linear-gradient(to right, #de0a26, #722faa);
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    border-top: none;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.trending-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+}
+.trending-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+.trending-carousel::-webkit-scrollbar-thumb {
+    background: var(--netflix-red);
+    border-radius: 4px;
+}
+.trending-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.trending-card img {
+    width: 200px;
+    height: 270px;
+    object-fit: cover;
+}
+.trending-card:hover {
+    transform: scale(1.05);
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+.scroll-btn:hover {
+    background: rgba(229, 9, 20, 0.8);
+}
+.scroll-btn.left {
+    left: 0;
+}
+.scroll-btn.right {
+    right: 0;
+}
+
+.reasons-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.reasons-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    padding-bottom: 10px;
+}
+
+.reasons-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+.reasons-carousel::-webkit-scrollbar-thumb {
+    background: var(--netflix-red);
+    border-radius: 4px;
+}
+
+.reason-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+.reason-card:hover {
+    transform: scale(1.05);
+}
+
+
+.faq-section {
+    max-width: 700px;
+    /* margin: auto; */ 
+    margin-left: 100px;
+}
+.faq-card {
+    background: #2a2a2a;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--muted-text);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .email-input {
+        width: 80%;
+    }
+    .trending-carousel img {
+        width: 150px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="/assets/netflix-favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-background">
+    <!-- HEADER -->
+    <header class="container-fluid netflix-header">
+        <nav class="d-flex justify-content-between align-items-center px-4 py-3">
+            <h1 class="logo text-danger fw-bold">NETFLIX</h1>
+            <div class="nav-actions d-flex align-items-center">
+                <!-- <select class="language-select me-3">
+                    <option value="English">English</option>
+                    <option value="Kannada">Kannada</option>
+                    <option value="Telugu">Telugu</option>
+                    <option value="Tamil">Tamil</option>
+                </select> -->
+                <a href="signUp.html" class="btn btn-danger">Log IN</a>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section class="hero text-center">
+            <h2 class="hero-title">Unlimited movies,<br> TV shows and more</h2>
+            <p class="hero-subtitle">Starts at ₹149. Cancel at any time.</p>
+            <p class="hero-subtext">Ready to watch? Enter your email to create or restart your membership.</p>
+            <form class="subscribe-form d-flex justify-content-center mt-3">
+                <input type="email" class="email-input" placeholder="Email Address" required>
+                <button class="btn btn-danger ms-2">Get Started</button>
+            </form>
+        </section>
+    </header>
+
+    <hr class="curved-divider">
+
+    <!-- MAIN CONTENT -->
+    <main class="container-fluid">
+
+        <!-- TRENDING -->
+        <section class="trending-section px-4">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="carousel-container">
+                <button class="scroll-btn left" onclick="scrollTrending(-300)">&#10094;</button>
+                <div class="trending-carousel" id="trending-carousel">
+                    <div class="trending-card"><img src="/assets/squid-game.jpg" alt="Squid Game"></div>
+                    <div class="trending-card"><img src="/assets/TheGreatKapil.jpg" alt="Kapil Show"></div>
+                    <div class="trending-card"><img src="/assets/raid2.jpg" alt="Raid 2"></div>
+                    <div class="trending-card"><img src="/assets/pushpa2.jpg" alt="Pushpa 2"></div>
+                    <div class="trending-card"><img src="/assets/salaar.jpg" alt="Salaar"></div>
+                      <div class="trending-card"><img src="/assets/salaar.jpg" alt="Salaar"></div>
+                        
+                </div>
+                <button class="scroll-btn right" onclick="scrollTrending(300)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- REASONS -->
+        <section class="reasons-section px-4 my-5">
+    <h2 class="section-title">More Reasons to Join</h2>
+    <div class="reasons-carousel-container">
+        <button class="scroll-btn left" onclick="scrollReasons(-300)">&#10094;</button>
+        <div class="reasons-carousel" id="reasons-carousel">
+            <div class="reason-card">
+                <h3>Enjoy on your TV</h3>
+                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Download to watch offline</h3>
+                <p>Save your favourites easily and always have something to watch.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Watch everywhere</h3>
+                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Create profiles for kids</h3>
+                <p>Send kids on adventures with their favourite characters in a space just for them.</p>
+            </div>
+        </div>
+        <button class="scroll-btn right" onclick="scrollReasons(300)">&#10095;</button>
+    </div>
+</section>
+
+
+        <!-- FAQ -->
+        <section class="faq-section my-5">
+            <h2 class="section-title text-center">Frequently Asked Questions</h2>
+            <div class="faq-card">What is Netflix? <span>+</span></div>
+            <div class="faq-card">How much does Netflix cost? <span>+</span></div>
+            <div class="faq-card">Where can I watch? <span>+</span></div>
+            <div class="faq-card">How do I cancel? <span>+</span></div>
+            <div class="faq-card">What can I watch on Netflix? <span>+</span></div>
+            <div class="faq-card">Is Netflix good for kids? <span>+</span></div>
+        </section>
+<!-- FOOTER -->
+<footer class="footer-section px-4 py-4">
+    <div class="footer-content d-flex justify-content-between align-items-center">
+        <!-- Netflix Logo -->
+        <div class="footer-logo">
+            <h2 class="text-danger fw-bold">NETFLIX</h2>
+        </div>
+<!-- 
+        Social Icons
+        <div class="footer-social d-flex align-items-center gap-3">
+            <a href="#" class="social-link"><img src="/assets/twitter-icon.png" alt="Twitter" class="social-icon"></a>
+            <a href="#" class="social-link"><img src="/assets/instagram-icon.png" alt="Instagram" class="social-icon"></a>
+        </div> -->
+
+        <!-- Contact Us -->
+        <div class="footer-contact">
+            <a href="contact.html" class="contact-link">Contact Us</a>
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+    <!-- SCROLL SCRIPT -->
+    <script>
+        function scrollTrending(scrollAmount) {
+            const carousel = document.getElementById("trending-carousel");
+            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
